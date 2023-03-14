@@ -1,0 +1,33 @@
+import java.time.LocalDate;
+
+public class Main {
+	public static void main(String[] args) {
+		Inscripcion inscripcion = new Inscripcion();
+		String fechaI1 = "2023-03-11";
+		String fechaF2 = "2023-03-20";
+		String fechaF3 = "2023-03-07";
+		String fechaF4 = "2023-03-10";
+
+		LocalDate fecha1 = LocalDate.parse(fechaI1);
+		LocalDate fecha2 = LocalDate.parse(fechaF2);
+		LocalDate fecha3 = LocalDate.parse(fechaF3);
+		LocalDate fecha4 = LocalDate.parse(fechaF4);
+
+		System.out.println(inscripcion.fechaIns);
+		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
+		Participante participante2 = new Participante("Luciana", "Rached", 465432225);
+		Concurso concursoTecno = new Concurso("Tecnología", fecha1, fecha2);
+		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
+		Concurso concursoPoderJudicial2 = new Concurso("Poder Judicial", fecha1, fecha2);
+		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial2);
+
+		inscripcion.inscribirParticipante(participante1, concursoTecno);
+		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial);
+		inscripcion.inscribirParticipante(participante2, concursoPoderJudicial);
+
+		System.out.println(participante1.getCantPuntos());
+		System.out.println(participante2.getCantPuntos());
+
+	}
+
+}
