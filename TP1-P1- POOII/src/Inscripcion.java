@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 public class Inscripcion {
 	public LocalDate fechaIns;
+	public String fecha1;
 	public boolean inscipto;
+	Participante participante;
 	public ArrayList<Concurso> listConcursos = new ArrayList<Concurso>();
 
 	public Inscripcion() {
@@ -12,7 +14,7 @@ public class Inscripcion {
 	}
 
 	public boolean participanteInscripto() {
-		return false;
+		return (participante.inscripto);
 	}
 
 	public void inscribirParticipante(Participante participante, Concurso consurso) {
@@ -24,9 +26,9 @@ public class Inscripcion {
 			participante.agregarConcurso(consurso);
 			consurso.agregarParticipante(participante);
 		} else {
-			System.out.println("El participante no se podrá inscribir ya que la fecha de inscripción caducó");
+			System.out.println("El participante: *" + participante.nombre + " " + participante.apellido
+					+ "* no se podrá inscribir ya que la fecha de inscripción caducó");
 		}
 
 	}
-
 }

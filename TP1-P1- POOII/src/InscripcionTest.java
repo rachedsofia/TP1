@@ -21,11 +21,10 @@ public class InscripcionTest {
 	public void ConcursoPoderJudicial() {
 		// inicialización
 		Inscripcion inscripcion = new Inscripcion();
+		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
 		LocalDate fecha3 = LocalDate.parse("07/03/2023");
 		LocalDate fecha4 = LocalDate.parse("10/03/2023");
-		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
 		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
-
 		boolean valorEsperadoParticipante2Inscripto = false;
 
 		// ejercitacion

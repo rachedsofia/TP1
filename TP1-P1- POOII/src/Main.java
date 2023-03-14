@@ -3,8 +3,8 @@ import java.time.LocalDate;
 public class Main {
 	public static void main(String[] args) {
 		Inscripcion inscripcion = new Inscripcion();
-		String fechaI1 = "2023-03-11";
-		String fechaF2 = "2023-03-20";
+		String fechaI1 = "2023-03-14";
+		String fechaF2 = "2023-03-27";
 		String fechaF3 = "2023-03-07";
 		String fechaF4 = "2023-03-10";
 
@@ -16,17 +16,19 @@ public class Main {
 		System.out.println(inscripcion.fechaIns);
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
 		Participante participante2 = new Participante("Luciana", "Rached", 465432225);
+
 		Concurso concursoTecno = new Concurso("Tecnología", fecha1, fecha2);
 		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
 		Concurso concursoPoderJudicial2 = new Concurso("Poder Judicial", fecha1, fecha2);
-		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial2);
 
+		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial2);
 		inscripcion.inscribirParticipante(participante1, concursoTecno);
+
 		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial);
 		inscripcion.inscribirParticipante(participante2, concursoPoderJudicial);
 
-		System.out.println(participante1.getCantPuntos());
-		System.out.println(participante2.getCantPuntos());
+		System.out.println("Cantidad de puntos participante 1: " + participante1.getCantPuntos());
+		System.out.println("Cantidad de puntos participante 1: " + participante2.getCantPuntos());
 
 	}
 
