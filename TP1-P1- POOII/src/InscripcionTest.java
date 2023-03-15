@@ -22,10 +22,8 @@ public class InscripcionTest {
 		// inicialización
 		Inscripcion inscripcion = new Inscripcion();
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
-		// LocalDate fecha3 = LocalDate.parse("07/03/2023");
-		LocalDate fecha3 = LocalDate.parse("2023/03/07");
-
-		LocalDate fecha4 = LocalDate.parse("10/03/2023");
+		LocalDate fecha3 = LocalDate.of(2023, 03, 07);
+		LocalDate fecha4 = LocalDate.of(2023, 03, 10);
 		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
 		boolean valorEsperadoParticipante2Inscripto = false;
 
@@ -41,8 +39,8 @@ public class InscripcionTest {
 	@Test
 	public void concursoTecnologia() {
 		// inicializacion
-		LocalDate fecha1 = LocalDate.parse("11/03/2023");
-		LocalDate fecha2 = LocalDate.parse("20/03/2023");
+		LocalDate fecha1 = LocalDate.of(2023, 03, 15);
+		LocalDate fecha2 = LocalDate.of(2023, 03, 20);
 
 		Inscripcion inscripcion = new Inscripcion();
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
@@ -61,8 +59,8 @@ public class InscripcionTest {
 	@Test
 	public void concursoPoderJudicial1() {
 		// inicializacion
-		LocalDate fecha3 = LocalDate.parse("07/03/2023");
-		LocalDate fecha4 = LocalDate.parse("10/03/2023");
+		LocalDate fecha3 = LocalDate.of(2023, 03, 07);
+		LocalDate fecha4 = LocalDate.of(2023, 03, 10);
 		Inscripcion inscripcion = new Inscripcion();
 		Participante participante2 = new Participante("Luciana", "Rached", 465432225);
 		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
