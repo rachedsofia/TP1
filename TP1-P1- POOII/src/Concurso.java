@@ -16,12 +16,6 @@ public class Concurso {
 		this.fechaHasta = fechaHasta;
 	}
 
-	public Concurso(String nombre, String fechaDesde, String fechaHasta) {
-		this.nombreConcurso = nombre;
-		this.fechaDesde1 = fechaDesde;
-		this.fechaHasta1 = fechaHasta;
-	}
-
 	public void agregarParticipante(Participante unParticipante) {
 		this.listParticipante.add(unParticipante);
 	}

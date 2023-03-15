@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Main {
 	public static void main(String[] args) {
 		Inscripcion inscripcion = new Inscripcion();
-		String fechaI1 = "2023-03-14";
+		String fechaI1 = "2023-03-15";
 		String fechaF2 = "2023-03-27";
 		String fechaF3 = "2023-03-07";
 		String fechaF4 = "2023-03-10";
@@ -23,8 +23,6 @@ public class Main {
 
 		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial2);
 		inscripcion.inscribirParticipante(participante1, concursoTecno);
-
-		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial);
 		inscripcion.inscribirParticipante(participante2, concursoPoderJudicial);
 
 		System.out.println("Cantidad de puntos participante 1: " + participante1.getCantPuntos());
