@@ -1,8 +1,13 @@
+package TP1Test;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Test;
+
+import TP1Modelo.Concurso;
+import TP1Modelo.Participante;
 
 public class InscripcionTest {
 //	[TestFixture]
@@ -20,7 +25,6 @@ public class InscripcionTest {
 	@Test
 	public void ConcursoPoderJudicial() {
 		// inicialización
-		Inscripcion inscripcion = new Inscripcion();
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
 		LocalDate fecha3 = LocalDate.of(2023, 03, 07);
 		LocalDate fecha4 = LocalDate.of(2023, 03, 10);
@@ -28,7 +32,7 @@ public class InscripcionTest {
 		boolean valorEsperadoParticipante2Inscripto = false;
 
 		// ejercitacion
-		inscripcion.inscribirParticipante(participante1, concursoPoderJudicial);
+		concursoPoderJudicial.inscribirParticipante(participante1);
 		boolean resultado2 = participante1.inscripto;
 //		
 		// validacion
@@ -42,13 +46,12 @@ public class InscripcionTest {
 		LocalDate fecha1 = LocalDate.of(2023, 03, 15);
 		LocalDate fecha2 = LocalDate.of(2023, 03, 20);
 
-		Inscripcion inscripcion = new Inscripcion();
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
 		Concurso concursoTecno = new Concurso("Tecnología", fecha1, fecha2);
 		int valorEsperadoParticipante1Inscripto = 10;
 
 		// ejercitacion
-		inscripcion.inscribirParticipante(participante1, concursoTecno);
+		concursoTecno.inscribirParticipante(participante1);
 		int resultado1 = participante1.getCantPuntos();
 
 		// validacion
@@ -61,12 +64,11 @@ public class InscripcionTest {
 		// inicializacion
 		LocalDate fecha3 = LocalDate.of(2023, 03, 07);
 		LocalDate fecha4 = LocalDate.of(2023, 03, 10);
-		Inscripcion inscripcion = new Inscripcion();
 		Participante participante2 = new Participante("Luciana", "Rached", 465432225);
 		Concurso concursoPoderJudicial = new Concurso("Poder Judicial", fecha3, fecha4);
 		boolean valorEsperadoParticipante3Inscripto = false;
 		// ejercitacion
-		inscripcion.inscribirParticipante(participante2, concursoPoderJudicial);
+		concursoPoderJudicial.inscribirParticipante(participante2);
 		boolean resultado3 = participante2.inscripto;
 
 		// validacion
