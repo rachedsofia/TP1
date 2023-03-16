@@ -10,18 +10,6 @@ import TP1Modelo.Concurso;
 import TP1Modelo.Participante;
 
 public class InscripcionTest {
-//	[TestFixture]
-
-//	String fechaI1 = "11/03/2023";
-//	String fechaF2 = "20/03/2023";
-//	String fechaF3 = "07/03/2023";
-//	String fechaF4 = "10/03/2023";
-
-//	LocalDate fecha1 = LocalDate.parse(fechaI1);
-//	LocalDate fecha2 = LocalDate.parse(fechaF2);
-//	LocalDate fecha3 = LocalDate.parse(fechaF3);
-//	LocalDate fecha4 = LocalDate.parse(fechaF4);
-
 	@Test
 	public void ConcursoPoderJudicial() {
 		// inicialización
