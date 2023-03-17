@@ -1,14 +1,16 @@
 package TP1Modelo;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Participante {
-	public String nombre;
-	public String apellido;
-	public int id;
-	public int cantPuntos = 0;
+	private String nombre; // private todo
+	// sumar puntos
+	private String apellido;
+	private int id;
+	private int cantPuntos = 0;
 	LocalDate fechaIns;
-	public ArrayList<Concurso> listConcurso = new ArrayList<Concurso>();
+	private ArrayList<Concurso> listConcurso = new ArrayList<Concurso>();
 
 	public boolean inscripto = false;
 
@@ -23,4 +25,7 @@ public class Participante {
 		return cantPuntos;
 	}
 
+	public void sumarPuntos() {
+		this.cantPuntos = +10;
+	}
 }

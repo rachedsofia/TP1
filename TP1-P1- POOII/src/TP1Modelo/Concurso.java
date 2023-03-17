@@ -1,4 +1,5 @@
 package TP1Modelo;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -30,7 +31,7 @@ public class Concurso {
 
 	public void inscribirParticipante(Participante participante) {
 		if ((!yaInscripto(participante)) && ((inscribePrimerDia()))) {
-			participante.cantPuntos += 10;
+			participante.sumarPuntos();
 		}
 		if (sePuedeInscribir(participante) == true) {
 			participante.inscripto = true;

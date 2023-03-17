@@ -31,7 +31,7 @@ public class InscripcionTest {
 	@Test
 	public void concursoTecnologia() {
 		// inicializacion
-		LocalDate fecha1 = LocalDate.of(2023, 03, 15);
+		LocalDate fecha1 = LocalDate.now();
 		LocalDate fecha2 = LocalDate.of(2023, 03, 20);
 
 		Participante participante1 = new Participante("Sofia", "Rached", 44122180);
