@@ -5,10 +5,10 @@ import java.util.ArrayList;
 
 public class Concurso {
 
-	public String nombreConcurso;
-	public LocalDate fechaDesde;
-	public LocalDate fechaHasta;
-	public ArrayList<Participante> listParticipante = new ArrayList<Participante>();
+	private String nombreConcurso;
+	private LocalDate fechaDesde;
+	private LocalDate fechaHasta;
+	private ArrayList<Participante> listParticipante = new ArrayList<Participante>();
 
 	public Concurso(String nombre, LocalDate fechaDesde, LocalDate fechaHasta) {
 		this.nombreConcurso = nombre;
